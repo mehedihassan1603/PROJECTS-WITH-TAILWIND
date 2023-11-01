@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruits</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <nav class="bg-orange-200 lg:bg-[#F85559] p-1 flex items-center justify-between mx-4 lg:mx-32 mt-4 rounded-full">
+
+    <div class="hidden lg:flex items-center space-x-3 pl-10">
+      <a href="#" class="text-white">Home</a>
+      <a href="#" class="text-white">About Us</a>
+      <a href="#" class="text-white">Shop</a>
+      <a href="#" class="text-white">All Fruits</a>
+    </div>
+    <div class="flex items-center gap-3 ">
+      <div><img src="./images/logo.png" alt=""></div>
+      <a href="#" class="lg:text-white text-3xl font-bold">Fruit Burst</a>
+    </div>
+    <div class="hidden lg:flex items-center space-x-2 pr-10">
+      <div class="relative flex items-center space-x-2">
+        <input type="text" placeholder="Search" class="px-2 py-1 pl-8 border rounded-lg focus:outline-none">
+        <img class="w-4 absolute right-4 opacity-60" src="./images/search-interface-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="flex lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </div>
+  </nav>
+
+  <!-- Banner Section -->
+
+  <section class="mx-4 lg:mx-32 my-4 rounded-lg">
+    <div class="carousel w-full ">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="./images/banner1.png" class="w-full rounded-lg">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-gray-950 to-gray-500 opacity-70 rounded-lg">
+        </div>
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle bg-gray-500 border-none text-white">❮</a>
+
+          <div class="absolute flex flex-col items-center left-16 md:left-60 md:gap-5 lg:left-80 -bottom-3/4 lg:-bottom-3/4">
+            <h1 class="text-xl md:text-3xl lg:text-5xl text-white text-center font-bold">Exotic tastes at your <br>
+              doorstep</h1>
+            <p class="text-white text-xs lg:text-xl lg:mt-4">We supply highly quality organic products</p>
+            <Button class="btn bg-[#F85559] border-none rounded-lg text-white text-sm lg:text-xl mt-1 lg:mt-4">Shop
+              Now</Button>
+          </div>
+
+          <a href="#slide2" class="btn btn-circle bg-gray-500 border-none text-white">❯</a>
+        </div>
+      </div>
+
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="./images/banner2.png" class="w-full rounded-lg">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-gray-950 to-gray-500 opacity-70 rounded-lg">
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle bg-gray-500 border-none text-white">❮</a>
+          <div class="absolute flex flex-col items-center left-16 md:left-60 md:gap-5 lg:left-80 -bottom-3/4 lg:-bottom-3/4">
+            <h1 class="text-xl md:text-3xl lg:text-5xl text-white text-center font-bold">Exotic tastes at your <br>
+              doorstep</h1>
+            <p class="text-white text-xs lg:text-xl lg:mt-4">We supply highly quality organic products</p>
+            <Button class="btn bg-[#F85559] border-none rounded-lg text-white text-sm lg:text-xl mt-1 lg:mt-4">Shop
+              Now</Button>
+          </div>
+          <a href="#slide3" class="btn btn-circle bg-gray-500 border-none text-white">❯</a>
+        </div>
+      </div>
+
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="./images/banner3.png" class="w-full rounded-lg">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-gray-950 to-gray-500 opacity-70 rounded-lg">
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle bg-gray-500 border-none text-white">❮</a>
+          <div class="absolute flex flex-col items-center left-16 md:left-60 md:gap-5 lg:left-80 -bottom-3/4 lg:-bottom-3/4">
+            <h1 class="text-xl md:text-3xl lg:text-5xl text-white text-center font-bold">Exotic tastes at your <br>
+              doorstep</h1>
+            <p class="text-white text-xs lg:text-xl lg:mt-4">We supply highly quality organic products</p>
+            <Button class="btn bg-[#F85559] border-none rounded-lg text-white text-sm lg:text-xl mt-1 lg:mt-4">Shop
+              Now</Button>
+          </div>
+          <a href="#slide4" class="btn btn-circle bg-gray-500 border-none text-white">❯</a>
+        </div>
+      </div>
+
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="./images/banner4.png" class="w-full rounded-lg" />
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-gray-950 to-gray-500 opacity-70 rounded-lg">
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle bg-gray-500 border-none text-white">❮</a>
+          <div class="absolute flex flex-col items-center left-16 md:left-60 md:gap-5 lg:left-80 -bottom-3/4 lg:-bottom-3/4">
+            <h1 class="text-xl md:text-3xl lg:text-5xl text-white text-center font-bold">Exotic tastes at your <br>
+              doorstep</h1>
+            <p class=" text-white text-xs lg:text-xl lg:mt-4">We supply highly quality organic products</p>
+            <Button class="btn bg-[#F85559] border-none rounded-lg text-white text-sm lg:text-xl mt-1 lg:mt-4">SHOP
+              NOW</Button>
+          </div>
+          <a href="#slide1" class="btn btn-circle bg-gray-500 border-none text-white">❯</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden md:block lg:block relative bottom-24 md:bottom-16 bg-white shadow-lg mx-16 rounded-lg py-10 md:py-3">
+      <div class="flex flex-row justify-center text-center gap-8 mx-16 rounded-lg">
+        <div><img src="./images/fruit1.png" alt="">Strawberry</div>
+        <div><img src="./images/fruit2.png" alt="">Orange</div>
+        <div><img src="./images/fruit3.png" alt="">Mango</div>
+        <div><img src="./images/fruit4.png" alt="">Strawberry</div>
+        <div><img src="./images/fruit5.png" alt="">Mango</div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+  <!-- Deal Section -->
+  <section class="mx-4 lg:mx-32 my-10">
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-2">
+      <div>
+        <h1 class="text-center lg:text-left text-4xl font-bold pb-4">Deal of The Day</h1>
+        <p class="text-center lg:text-left tex-sm">Contrary to popular belief, is not simply random text. It has roots
+          in a piece of classical
+          <br> Latin literature from 45 BC, making it over 2000 years old.
+        </p>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-5 text-center auto-cols-max pr-10">
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:15;"></span>
+            </span>
+            days
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:10;"></span>
+            </span>
+            hours
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:24;"></span>
+            </span>
+            min
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:7;"></span>
+            </span>
+            sec
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 lg:pl-0 flex justify-center items-center gap-10 lg:gap-4 flex-col lg:flex-row md:pl-0 md:justify-center md:items-center">
+
+
+
+
+
+
+
+
+
+
+      <div class="card w-80 bg-base-100 shadow-xl">
+        <figure class="px-5 pt-5 flex flex-col gap-4 shadow-lg">
+          <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
+          <h1 class="font-bold text-lg">12.90$ - 18.85$</h1>
+        </figure>
+        <div class="items-center text-center">
+          <h2 class="mt-4">Apple!</h2>
+          <div class="rating rating-half mt-3">
+            <input type="radio" name="rating-10" class="rating-hidden" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" checked />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+          </div>
+          <div class="my-4">
+            <a class="text-orange-500" href="#my_modal_8">Details!</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="modal" id="my_modal_8">
+        <div class="modal-box py-16 px-10">
+          <figure class="flex flex-col items-center">
+            <img src="./images/fruit6.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="items-center text-center">
+            <h2 class="font-bold text-2xl mt-8 mb-5">Apple!</h2>
+            <p>Professional employees are there for you to pick the most 
+              amazing and fresh fruits</p>
+            <div class="rating rating-half mt-3 mb-5">
+              <input type="radio" name="rating-10" class="rating-hidden" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            </div>
+            <div class="flex justify-center gap-10">
+              <div><a href="#" class="btn btn-outline btn-secondary">Close</a> </div>
+              <div><a href="#" class="btn bg-pink-600 text-white rounded-lg hover:bg-green-600">Buy Now</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="my_modal_9">
+        <div class="modal-box py-16 px-10">
+          <figure class="flex flex-col items-center">
+            <img src="./images/fruit7.png" alt="" class="rounded-xl" />
+          </figure>
+          <div class="items-center text-center">
+            <h2 class="font-bold text-2xl mt-8 mb-5">Orange!</h2>
+            <p>Professional employees are there for you to pick the most 
+              amazing and fresh fruits</p>
+            <div class="rating rating-half mt-3 mb-5">
+              <input type="radio" name="rating-10" class="rating-hidden" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            </div>
+            <div class="flex justify-center gap-10">
+              <div><a href="#" class="btn btn-outline btn-secondary">Close</a> </div>
+              <div><a href="#" class="btn bg-pink-600 text-white rounded-lg hover:bg-green-600">Buy Now</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="card w-80 bg-base-100 shadow-xl">
+          <figure class="px-5 pt-5 flex flex-col gap-2 shadow-lg">
+            <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
+            <h1 class="font-bold text-lg">12.90$ - 18.85$</h1>
+          </figure>
+          <div class="items-center text-center">
+            <h2 class="mt-4">Orange!</h2>
+            <div class="rating rating-half mt-3">
+              <input type="radio" name="rating-10" class="rating-hidden" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            </div>
+            <div class="my-4">
+              <a class="text-orange-500" href="#my_modal_9">Details!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-80 bg-base-100 shadow-xl">
+          <figure class="px-5 pt-5 flex flex-col gap-4 shadow-lg">
+            <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
+            <h1 class="font-bold text-lg">12.90$ - 18.85$</h1>
+          </figure>
+          <div class="items-center text-center">
+            <h2 class="mt-4">Red Dragon!</h2>
+            <div class="rating rating-half mt-3">
+              <input type="radio" name="rating-10" class="rating-hidden" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" checked />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+            </div>
+            <div class="my-4">
+              <a class="text-orange-500" href="#my_modal_10">Details!</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal" id="my_modal_10">
+          <div class="modal-box py-16 px-10">
+            <figure class="flex flex-col items-center">
+              <img src="./images/fruit8.png" alt="" class="rounded-xl" />
+            </figure>
+            <div class="items-center text-center">
+              <h2 class="font-bold text-2xl mt-8 mb-5">Red Dragon!</h2>
+              <p>Professional employees are there for you to pick the most 
+                amazing and fresh fruits</p>
+              <div class="rating rating-half mt-3 mb-5">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              </div>
+              <div class="flex justify-center gap-10">
+                <div><a href="#" class="btn btn-outline btn-secondary">Close</a> </div>
+                <div><a href="#" class="btn bg-pink-600 text-white rounded-lg hover:bg-green-600">Buy Now</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-80 bg-base-100 shadow-xl">
+          <figure class="px-5 pt-5 flex flex-col gap-4 shadow-lg">
+            <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
+            <h1 class="font-bold text-lg">12.90$ - 18.85$</h1>
+          </figure>
+          <div class="items-center text-center">
+            <h2 class="mt-4">Banana!</h2>
+            <div class="rating rating-half mt-3">
+              <input type="radio" name="rating-10" class="rating-hidden" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" checked />
+            </div>
+            <div class="my-4">
+              <a class="text-orange-500" href="#my_modal_11">Details!</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal" id="my_modal_11">
+          <div class="modal-box py-16 px-10">
+            <figure class="flex flex-col items-center">
+              <img src="./images/fruit9.png" alt="" class="rounded-xl" />
+            </figure>
+            <div class="items-center text-center">
+              <h2 class="font-bold text-2xl mt-8 mb-5">Banana!</h2>
+              <p>Professional employees are there for you to pick the most 
+                amazing and fresh fruits</p>
+              <div class="rating rating-half mt-3 mb-5">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-orange-500 mask mask-star-2 mask-half-2" />
+              </div>
+              <div class="flex justify-center gap-10">
+                <div><a href="#" class="btn btn-outline btn-secondary">Close</a> </div>
+                <div><a href="#" class="btn bg-pink-600 text-white rounded-lg hover:bg-green-600">Buy Now</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex justify-center">
+        <Button class="btn bg-[#F85559] border-none rounded-lg text-white text-sm lg:text-xl mt-4">SHOP ALL</Button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Meet Section -->
+  <section class="mx-6 lg:w-11/12 lg:mx-20 my-16 text-white lg:p-20 rounded-lg">
+    <div class="hero lg:min-h-screen rounded-lg" style="background-image: url(./images/team.png); ">
+      <div class="hero-overlay bg-opacity-60 rounded-lg"></div>
+      <div class="hero-content text-center text-neutral-content flex flex-col">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-4xl text-white font-bold">Meet The Team Section</h1>
+          <p class="mb-3 text-xs text-white">Contrary to popular belief, is not simply random text. It has roots in a
+            piece of classical
+            Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+
+
+        <div class="flex flex-col lg:flex-row lg:justify-center lg:space-x-14">
+          <div>
+            <div class="flex justify-center rounded-full mt-10"><img src="./images/member1.png" alt=""></div>
+            <h1 class="text-center text-lg text-white font-bold mt-4">Awlad Hossain</h1>
+            <p class="text-center text-white">Fruits Expert</p>
+            <div class="flex justify-center gap-2 mt-1 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256s114.6 256 256 256c1.5 0 3 0 4.5-.1V312.7h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5C433.7 471.4 512 372.9 512 256z"
+                    fill="#DE3163" data-original="#FA8072" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 49.652 49.652"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm11.075 19.144c.011.246.017.494.017.742 0 7.551-5.746 16.255-16.259 16.255-3.227 0-6.231-.943-8.759-2.565.447.053.902.08 1.363.08 2.678 0 5.141-.914 7.097-2.446a5.72 5.72 0 0 1-5.338-3.969 5.76 5.76 0 0 0 2.58-.096 5.715 5.715 0 0 1-4.583-5.603l.001-.072a5.69 5.69 0 0 0 2.587.714 5.71 5.71 0 0 1-2.541-4.755c0-1.048.281-2.03.773-2.874a16.225 16.225 0 0 0 11.777 5.972 5.707 5.707 0 0 1-.147-1.303 5.714 5.714 0 0 1 9.884-3.91 11.406 11.406 0 0 0 3.63-1.387 5.74 5.74 0 0 1-2.516 3.162 11.36 11.36 0 0 0 3.282-.899 11.494 11.494 0 0 1-2.848 2.954z"
+                    fill="#DE3163" data-original="#000000" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 152 152"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <g data-name="Layer 2">
+                    <path
+                      d="M76 0a76 76 0 1 0 76 76A76 76 0 0 0 76 0zM53.9 116H37.32V62.59H53.9zm-8.3-60.7a9.65 9.65 0 1 1 9.61-9.7 9.68 9.68 0 0 1-9.61 9.7zM116 116H99.43V90c0-6.2-.12-14.15-8.62-14.15s-10 6.74-10 13.7V116H64.3V62.59h15.91v7.28h.23c2.21-4.2 7.62-8.63 15.69-8.63 16.78 0 19.87 11.06 19.87 25.42z"
+                      data-name="10.Linkedin" fill="#DE3163" data-original="#000000" class=""></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="flex justify-center rounded-full mt-10"><img src="./images/member2.png" alt=""></div>
+            <h1 class="text-center text-lg text-white font-bold mt-4">Safia Chowdhury</h1>
+            <p class="text-center text-white">Fruits Expert</p>
+            <div class="flex justify-center gap-2 mt-1 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256s114.6 256 256 256c1.5 0 3 0 4.5-.1V312.7h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5C433.7 471.4 512 372.9 512 256z"
+                    fill="#DE3163" data-original="#FA8072" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 49.652 49.652"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm11.075 19.144c.011.246.017.494.017.742 0 7.551-5.746 16.255-16.259 16.255-3.227 0-6.231-.943-8.759-2.565.447.053.902.08 1.363.08 2.678 0 5.141-.914 7.097-2.446a5.72 5.72 0 0 1-5.338-3.969 5.76 5.76 0 0 0 2.58-.096 5.715 5.715 0 0 1-4.583-5.603l.001-.072a5.69 5.69 0 0 0 2.587.714 5.71 5.71 0 0 1-2.541-4.755c0-1.048.281-2.03.773-2.874a16.225 16.225 0 0 0 11.777 5.972 5.707 5.707 0 0 1-.147-1.303 5.714 5.714 0 0 1 9.884-3.91 11.406 11.406 0 0 0 3.63-1.387 5.74 5.74 0 0 1-2.516 3.162 11.36 11.36 0 0 0 3.282-.899 11.494 11.494 0 0 1-2.848 2.954z"
+                    fill="#DE3163" data-original="#000000" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 152 152"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <g data-name="Layer 2">
+                    <path
+                      d="M76 0a76 76 0 1 0 76 76A76 76 0 0 0 76 0zM53.9 116H37.32V62.59H53.9zm-8.3-60.7a9.65 9.65 0 1 1 9.61-9.7 9.68 9.68 0 0 1-9.61 9.7zM116 116H99.43V90c0-6.2-.12-14.15-8.62-14.15s-10 6.74-10 13.7V116H64.3V62.59h15.91v7.28h.23c2.21-4.2 7.62-8.63 15.69-8.63 16.78 0 19.87 11.06 19.87 25.42z"
+                      data-name="10.Linkedin" fill="#DE3163" data-original="#000000" class=""></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="flex justify-center rounded-full mt-10"><img src="./images/member3.png" alt=""></div>
+            <h1 class="text-center text-lg text-white font-bold mt-4">Rokib Hossain</h1>
+            <p class="text-center text-white">Fruits Expert</p>
+            <div class="flex justify-center gap-2 mt-1 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256s114.6 256 256 256c1.5 0 3 0 4.5-.1V312.7h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5C433.7 471.4 512 372.9 512 256z"
+                    fill="#DE3163" data-original="#FA8072" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 49.652 49.652"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm11.075 19.144c.011.246.017.494.017.742 0 7.551-5.746 16.255-16.259 16.255-3.227 0-6.231-.943-8.759-2.565.447.053.902.08 1.363.08 2.678 0 5.141-.914 7.097-2.446a5.72 5.72 0 0 1-5.338-3.969 5.76 5.76 0 0 0 2.58-.096 5.715 5.715 0 0 1-4.583-5.603l.001-.072a5.69 5.69 0 0 0 2.587.714 5.71 5.71 0 0 1-2.541-4.755c0-1.048.281-2.03.773-2.874a16.225 16.225 0 0 0 11.777 5.972 5.707 5.707 0 0 1-.147-1.303 5.714 5.714 0 0 1 9.884-3.91 11.406 11.406 0 0 0 3.63-1.387 5.74 5.74 0 0 1-2.516 3.162 11.36 11.36 0 0 0 3.282-.899 11.494 11.494 0 0 1-2.848 2.954z"
+                    fill="#DE3163" data-original="#000000" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 152 152"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <g data-name="Layer 2">
+                    <path
+                      d="M76 0a76 76 0 1 0 76 76A76 76 0 0 0 76 0zM53.9 116H37.32V62.59H53.9zm-8.3-60.7a9.65 9.65 0 1 1 9.61-9.7 9.68 9.68 0 0 1-9.61 9.7zM116 116H99.43V90c0-6.2-.12-14.15-8.62-14.15s-10 6.74-10 13.7V116H64.3V62.59h15.91v7.28h.23c2.21-4.2 7.62-8.63 15.69-8.63 16.78 0 19.87 11.06 19.87 25.42z"
+                      data-name="10.Linkedin" fill="#DE3163" data-original="#000000" class=""></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="flex justify-center rounded-full mt-10"><img src="./images/member4.png" alt=""></div>
+            <h1 class="text-center text-lg text-white font-bold mt-4">Chaity</h1>
+            <p class="text-center text-white">Fruits Expert</p>
+            <div class="flex justify-center gap-2 mt-1 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256s114.6 256 256 256c1.5 0 3 0 4.5-.1V312.7h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5C433.7 471.4 512 372.9 512 256z"
+                    fill="#DE3163" data-original="#FA8072" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 49.652 49.652"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <path
+                    d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm11.075 19.144c.011.246.017.494.017.742 0 7.551-5.746 16.255-16.259 16.255-3.227 0-6.231-.943-8.759-2.565.447.053.902.08 1.363.08 2.678 0 5.141-.914 7.097-2.446a5.72 5.72 0 0 1-5.338-3.969 5.76 5.76 0 0 0 2.58-.096 5.715 5.715 0 0 1-4.583-5.603l.001-.072a5.69 5.69 0 0 0 2.587.714 5.71 5.71 0 0 1-2.541-4.755c0-1.048.281-2.03.773-2.874a16.225 16.225 0 0 0 11.777 5.972 5.707 5.707 0 0 1-.147-1.303 5.714 5.714 0 0 1 9.884-3.91 11.406 11.406 0 0 0 3.63-1.387 5.74 5.74 0 0 1-2.516 3.162 11.36 11.36 0 0 0 3.282-.899 11.494 11.494 0 0 1-2.848 2.954z"
+                    fill="#DE3163" data-original="#000000" class=""></path>
+                </g>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 152 152"
+                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                <g>
+                  <g data-name="Layer 2">
+                    <path
+                      d="M76 0a76 76 0 1 0 76 76A76 76 0 0 0 76 0zM53.9 116H37.32V62.59H53.9zm-8.3-60.7a9.65 9.65 0 1 1 9.61-9.7 9.68 9.68 0 0 1-9.61 9.7zM116 116H99.43V90c0-6.2-.12-14.15-8.62-14.15s-10 6.74-10 13.7V116H64.3V62.59h15.91v7.28h.23c2.21-4.2 7.62-8.63 15.69-8.63 16.78 0 19.87 11.06 19.87 25.42z"
+                      data-name="10.Linkedin" fill="#DE3163" data-original="#000000" class=""></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="mx-4 lg:mx-32 my-16">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl font-bold mb-6">Why Choose Us</h1>
+      <p class="text-xs">Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+        <br> Latin literature from 45 BC, making it over 2000 years old.
+      </p>
+    </div>
+    <!-- Why choooooooooooos -->
+    <div class="flex flex-col lg:flex-row justify-between gap-6">
+      <!-- left -->
+      <div class="space-y-8 order-2 lg:order-first px-12 lg:px-2">
+        <div class="flex flex-col lg:flex-row items-center text-center lg:text-left gap-6">
+          <div class="bg-slate-300 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32"
+              x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+              <g>
+                <path
+                  d="M14.186 42.406c-.047 0-.095-.003-.144-.01a19.84 19.84 0 0 1-6.513-2.132 1.001 1.001 0 0 1 .942-1.766 17.78 17.78 0 0 0 5.856 1.917 1.001 1.001 0 0 1-.141 1.991zM49.814 42.406a1 1 0 0 1-.141-1.99 17.773 17.773 0 0 0 5.856-1.917 1.002 1.002 0 0 1 .942 1.766 19.84 19.84 0 0 1-6.513 2.132 1.184 1.184 0 0 1-.144.009zM39.354 33.429a.998.998 0 0 1-.837-1.546 7.622 7.622 0 0 1 6.405-3.471 1 1 0 1 1 0 2 5.624 5.624 0 0 0-4.729 2.563.997.997 0 0 1-.839.454z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M47.139 30.412c-3.545 0-6.539-2.994-6.539-6.538s2.994-6.538 6.539-6.538c3.544 0 6.538 2.994 6.538 6.538s-2.994 6.538-6.538 6.538zm0-11.076c-2.46 0-4.539 2.078-4.539 4.538s2.079 4.538 4.539 4.538 4.538-2.078 4.538-4.538-2.078-4.538-4.538-4.538z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M56 37.059a1 1 0 0 1-1-1 5.653 5.653 0 0 0-5.646-5.646 1 1 0 1 1 0-2c4.216 0 7.646 3.431 7.646 7.646a1 1 0 0 1-1 1z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M49.354 30.412h-4.431a1 1 0 1 1 0-2h4.431a1 1 0 1 1 0 2zM56 40.382a1 1 0 0 1-1-1v-3.323a1 1 0 1 1 2 0v3.323a1 1 0 0 1-1 1zM20.185 41.12a1 1 0 0 1-1-1c0-5.438 4.424-9.861 9.861-9.861a1 1 0 1 1 0 2c-4.335 0-7.861 3.526-7.861 7.861a1 1 0 0 1-1 1z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M34.954 32.259h-5.908a1 1 0 1 1 0-2h5.908a1 1 0 1 1 0 2zM24.646 33.429a1 1 0 0 1-.839-.454 5.627 5.627 0 0 0-4.729-2.563 1 1 0 1 1 0-2 7.62 7.62 0 0 1 6.405 3.471 1 1 0 0 1-.837 1.546zM20.185 45.551a1 1 0 0 1-1-1V40.12a1 1 0 1 1 2 0v4.431a1 1 0 0 1-1 1z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M32 32.259c-4.545 0-8.385-3.84-8.385-8.385s3.84-8.385 8.385-8.385 8.385 3.84 8.385 8.385-3.84 8.385-8.385 8.385zm0-14.77c-3.461 0-6.385 2.924-6.385 6.385s2.924 6.385 6.385 6.385 6.385-2.924 6.385-6.385-2.924-6.385-6.385-6.385z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M43.815 41.12a1 1 0 0 1-1-1c0-4.335-3.526-7.861-7.861-7.861a1 1 0 1 1 0-2c5.438 0 9.861 4.424 9.861 9.861a1 1 0 0 1-1 1z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path d="M43.815 45.551a1 1 0 0 1-1-1V40.12a1 1 0 1 1 2 0v4.431a1 1 0 0 1-1 1z" fill="#000000"
+                  data-original="#000000" class=""></path>
+                <path
+                  d="M32 48.511c-4.22 0-8.439-1.026-12.286-3.077a1.002 1.002 0 0 1 .942-1.766 24.065 24.065 0 0 0 22.689 0 1.002 1.002 0 0 1 .942 1.766A26.112 26.112 0 0 1 32 48.511zM16.861 30.412c-3.544 0-6.538-2.994-6.538-6.538s2.994-6.538 6.538-6.538 6.538 2.994 6.538 6.538-2.994 6.538-6.538 6.538zm0-11.076c-2.46 0-4.538 2.078-4.538 4.538s2.078 4.538 4.538 4.538 4.538-2.078 4.538-4.538-2.078-4.538-4.538-4.538z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M8 37.059a1 1 0 0 1-1-1c0-4.216 3.431-7.646 7.646-7.646a1 1 0 1 1 0 2A5.651 5.651 0 0 0 9 36.059a1 1 0 0 1-1 1z"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M19.077 30.412h-4.431a1 1 0 1 1 0-2h4.431a1 1 0 1 1 0 2zM8 40.382a1 1 0 0 1-1-1v-3.323a1 1 0 1 1 2 0v3.323a1 1 0 0 1-1 1z"
+                  fill="#000000" data-original="#000000" class=""></path>
+              </g>
+            </svg></div>
+          <div>
+            <h1 class="text-lg font-bold pb-1">Dedicated Team</h1>
+            <div class="flex items-center justify-center lg:justify-start"><div class="border-t border-black w-40"></div></div>
+            <p class="text-xs pt-1">Professional employees are there for you to pick
+              the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center text-center lg:text-left gap-6">
+          <div class="bg-slate-300 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32" x="0" y="0" viewBox="0 0 135.467 135.467" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M81.797 22.523c-5.772.018-11.163 3.117-14.408 7.77a18.795 18.795 0 0 0-2.111 3.976 2 2 0 1 0 3.732 1.441c.428-1.106.986-2.16 1.66-3.129 2.521-3.615 6.821-6.045 11.141-6.058a13.507 13.507 0 0 1 7.711 2.422 13.47 13.47 0 0 1 4.893 6.421c.636 1.782 3.16 1.766 3.775-.023a13.194 13.194 0 0 1 4.848-6.445 13.24 13.24 0 0 1 7.722-2.368c2.173.036 4.358.631 6.282 1.684a14.725 14.725 0 0 1 4.894 4.381c1.682 2.37 2.66 5.257 2.657 8.08 0 2.822-.935 5.686-2.323 8.37-2.669 5.158-6.873 9.551-11.396 13.661-4.616 4.194-9.526 8.059-14.645 11.623-.498-.322-1-.639-1.492-.97a2 2 0 0 0-2.238 3.314c.902.609 1.815 1.203 2.738 1.781a2 2 0 0 0 2.19-.043 148.912 148.912 0 0 0 16.138-12.744c4.656-4.23 9.231-8.935 12.258-14.785 1.583-3.06 2.761-6.512 2.769-10.223.01-3.71-1.253-7.364-3.392-10.379a18.674 18.674 0 0 0-6.238-5.576 17.617 17.617 0 0 0-8.135-2.171 17.144 17.144 0 0 0-10.084 3.09c-1.837 1.288-3.265 3.013-4.463 4.896-1.206-1.862-2.634-3.569-4.459-4.85-3.329-1.867-6.809-3.118-10.024-3.146zM10.545 48.447c-3.901 6.36-4.41 13.056-2.845 19.437 1.565 6.381 5.12 12.494 9.596 18.155 8.952 11.32 21.65 20.882 30.492 26.586a2 2 0 0 0 2.275-.075c8.427-6.25 21.924-15.661 31.352-26.748 4.714-5.543 8.447-11.533 9.91-17.902 1.463-6.37.511-13.132-2.781-17.858-3.293-4.727-6.096-7.272-9.354-9.06-3.26-1.788-6.942-2.797-10.68-2.86a22.462 22.462 0 0 0-13.224 4.063c-2.645 1.86-4.817 4.319-6.438 7.104-1.636-2.756-3.806-5.19-6.435-7.04-3.83-2.694-8.47-4.155-14.578-4.135s-13.388 3.973-17.29 10.333zm29.565-2.926a18.963 18.963 0 0 1 6.88 9.053c.635 1.781 3.16 1.765 3.775-.024 1.241-3.633 3.68-6.887 6.82-9.094s7.024-3.4 10.86-3.336c3.057.051 6.122.888 8.822 2.37 2.698 1.48 5.057 3.615 6.849 6.144 3.854 5.585 4.56 10.934 3.31 16.371-1.249 5.442-4.595 10.96-9.058 16.208-8.592 10.103-21.025 18.97-29.553 25.265-8.53-5.616-20.241-14.624-28.382-24.92-4.243-5.365-7.478-11.042-8.848-16.627-1.364-5.563-.953-10.99 2.111-16.388 3.362-5.098 9.477-8.414 14.445-8.43s8.832 1.2 11.97 3.408z" fill="#000000" data-original="#000000" class=""></path></g></svg></div>
+          <div>
+            <h1 class="text-lg font-bold pb-1">Fresh is Best</h1>
+            <div class="flex items-center justify-center lg:justify-start"><div class="border-t border-black w-40"></div></div>
+            <p class="text-xs pt-1">Professional employees are there for you to pick
+              the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center text-center lg:text-left gap-6">
+          <div class="bg-slate-300 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M352.742 291.476H88.779l228.58-145.334a6 6 0 0 0 1.844-8.284l-22.647-35.618a36.285 36.285 0 0 0-50.033-11.14l-32.165 20.451 2.548-12.191a34.314 34.314 0 1 0-66.987-14.914l-16.71 75.054-55.951-12.454a34.315 34.315 0 0 0-21 65.026L21.8 233.982a36.285 36.285 0 0 0-11.14 50.032l22.647 35.619a6 6 0 0 0 8.283 1.845l21.08-13.4v151.888a36.285 36.285 0 0 0 36.246 36.244H322.5a36.285 36.285 0 0 0 36.244-36.244v-162.49a6 6 0 0 0-6.002-6zm-99.78-190.248a24.084 24.084 0 0 1 12.961-3.794 24.481 24.481 0 0 1 5.316.587 24.09 24.09 0 0 1 15.19 10.658l19.428 30.555-94.5 60.086-32.436-51.014zm-91.33-14.173a22.314 22.314 0 1 1 43.545 9.775l-4.926 23.564-53.667 34.249zm7.16 67.69 32.436 51.014-54.76 34.816-32.435-51.014zM50.971 192.513a22.314 22.314 0 0 1 23.679-33.754l48.485 10.794-53.822 33.739-4.362-.972a22.168 22.168 0 0 1-13.98-9.807zM40.216 308.132l-19.427-30.556a24.272 24.272 0 0 1 7.45-33.467L103.906 196l32.435 51.014zM156.569 484.21H98.916a24.272 24.272 0 0 1-24.244-24.244v-156.49h81.9zm76.264 0h-64.264V303.476h64.264zm113.909-24.244A24.272 24.272 0 0 1 322.5 484.21h-77.667V303.476h101.909zM419.833 236.971l2.87-16.735a6 6 0 0 0-8.703-6.325l-15.028 7.9-15.029-7.9a6 6 0 0 0-8.706 6.325l2.87 16.735-12.158 11.85a6 6 0 0 0 3.325 10.235l16.8 2.442 7.514 15.225a6 6 0 0 0 10.762 0l7.513-15.225 16.8-2.442a6 6 0 0 0 3.325-10.235zm-12.817 13.1a6 6 0 0 0-4.518 3.282l-3.529 7.152-3.53-7.152a6 6 0 0 0-4.517-3.282l-7.894-1.147 5.712-5.567a6 6 0 0 0 1.726-5.311l-1.349-7.862 7.06 3.711a5.994 5.994 0 0 0 5.584 0l7.059-3.711-1.348 7.862a6 6 0 0 0 1.725 5.311l5.712 5.567zM488.841 154.3l-16.5-4.01-6.051-15.863a6 6 0 0 0-10.714-1.012l-8.911 14.453-16.957.853a6 6 0 0 0-4.272 9.876l10.991 12.941-4.427 16.39a6 6 0 0 0 8.073 7.115l15.7-6.454L470 197.866a6 6 0 0 0 9.261-5.479l-1.285-16.93 13.213-10.657a6 6 0 0 0-2.348-10.5zm-20.856 13.8a6 6 0 0 0-2.216 5.125l.6 7.953-6.681-4.359a6 6 0 0 0-5.559-.524l-7.376 3.032 2.08-7.7a6 6 0 0 0-1.219-5.449l-5.163-6.079 7.966-.4a6 6 0 0 0 4.807-2.842l4.185-6.789 2.842 7.452a6 6 0 0 0 4.189 3.691l7.751 1.884zM400.6 56.763l-4.429 16.39a6 6 0 0 0 8.073 7.116l15.7-6.455 14.221 9.279a6 6 0 0 0 9.261-5.48l-1.285-16.93 13.216-10.658a6 6 0 0 0-2.348-10.5l-16.5-4.009-6.05-15.864a6 6 0 0 0-10.714-1.01l-8.91 14.452-16.958.852a6 6 0 0 0-4.273 9.876zm13.991-11.844a6 6 0 0 0 4.806-2.843l4.186-6.789 2.842 7.452a6 6 0 0 0 4.189 3.692l7.75 1.883-6.208 5.006a6 6 0 0 0-2.217 5.125l.6 7.954-6.681-4.359a6 6 0 0 0-5.559-.524l-7.376 3.032 2.08-7.7a6 6 0 0 0-1.219-5.45l-5.163-6.08z" fill="#000000" data-original="#000000" class=""></path><path d="M291.746 237.835c-13.546 8.525-20.164 18.855-20.439 19.291a6 6 0 0 0 10.134 6.427c.9-1.4 22.609-34.215 69.86-22.527a6 6 0 0 0 2.883-11.648c-29.072-7.193-50.001.628-62.438 8.457zM405.6 174.293a6 6 0 0 0 4.6-11.084c-42.714-17.727-73.759-4.452-92.28 9.808a112.488 112.488 0 0 0-29.868 35.246A6 6 0 1 0 298.8 213.6a101.191 101.191 0 0 1 26.44-31.075c23.288-17.925 50.325-20.697 80.36-8.232zM338.178 129.844a6 6 0 0 0 3.862 7.555 90.163 90.163 0 0 0 25.438 3.676c10.034 0 21.623-1.811 32.015-7.971 13.6-8.058 22.32-21.787 25.934-40.8a6 6 0 1 0-11.789-2.24c-2.938 15.461-9.738 26.46-20.211 32.69-19.921 11.853-47.267 3.367-47.7 3.229a6 6 0 0 0-7.549 3.861zM258.867 284.873a10.806 10.806 0 1 0-10.805-10.806 10.819 10.819 0 0 0 10.805 10.806zm0-12a1.195 1.195 0 1 1-1.194 1.194 1.2 1.2 0 0 1 1.194-1.194zM343.887 88.873a10.806 10.806 0 1 0-10.806-10.806 10.818 10.818 0 0 0 10.806 10.806zm0-12a1.195 1.195 0 1 1-1.195 1.194 1.2 1.2 0 0 1 1.195-1.194zM496.194 80.633A10.806 10.806 0 1 0 507 91.438a10.817 10.817 0 0 0-10.806-10.805zm0 12a1.195 1.195 0 1 1 1.195-1.195 1.2 1.2 0 0 1-1.195 1.195zM254.444 224.027a10.806 10.806 0 1 0-10.8 10.806 10.817 10.817 0 0 0 10.8-10.806zm-10.8 1.2a1.195 1.195 0 1 1 1.194-1.2 1.2 1.2 0 0 1-1.199 1.195zM478.4 230.812a10.806 10.806 0 1 0 10.806 10.806 10.818 10.818 0 0 0-10.806-10.806zm0 12a1.194 1.194 0 1 1 1.195-1.194 1.2 1.2 0 0 1-1.195 1.194z" fill="#000000" data-original="#000000" class=""></path></g></svg></div>
+          <div>
+            <h1 class="text-lg font-bold pb-1">Gift Certificates</h1>
+            <div class="flex items-center justify-center lg:justify-start"><div class="border-t border-black w-40"></div></div>
+            <p class="text-xs pt-1">Professional employees are there for you to pick
+              the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+      </div>
+      <!-- pic -->
+      <div class="md: flex md:items-center md:justify-center">
+        <img src="./images/whychoose1.png" alt="">
+      </div>
+      <!-- right side -->
+      <div class="space-y-8 grid order-last px-12 lg:px-2">
+        <div class="flex flex-col items-center lg:flex-row-reverse text-center lg:text-right gap-6">
+          <div class="bg-slate-300 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32" x="0" y="0" viewBox="0 0 512.748 512.748" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M512.748 242.627c0-66.288-25.813-128.608-72.684-175.479a7.502 7.502 0 0 0-10.607 0L167.684 328.92c-19.465-10.278-37.254-7.297-57.66-3.724-9.261-33.415-32.482-46.356-33.706-47.015-3.647-1.965-8.195-.599-10.159 3.048s-.6 8.195 3.048 10.159c.217.116 15.958 8.904 24.389 31.793-24.245-6.016-50.08 2.298-67.37 20.014-23.751-86.614 4.809-216.558 115.392-216.404 49.194 0 92.625 32.375 108.846 78.346a7.5 7.5 0 1 0 14.146-4.986c-9.497-26.966-26.814-50.253-50.612-66.266a78.46 78.46 0 0 1 13.303-30.961l9.888-13.759c9.496-13.216-5.177-31.574-20.287-24.686l-23.551 10.75c-.516-20.133 4.601-35.603 16.807-51.622 3.711-5.165 3.492-11.937-.546-16.85-4.038-4.915-10.64-6.439-16.426-3.802-20.973 9.573-41.202 18.072-52.447 39.91-11.16-21.673-31.582-30.387-52.447-39.91C82.507.313 75.904 1.843 71.867 6.756c-4.038 4.914-4.258 11.685-.547 16.851 12.145 16.034 17.37 31.451 16.808 51.622l-23.553-10.75c-14.803-6.755-29.976 11.199-20.286 24.686l9.888 13.759a78.446 78.446 0 0 1 13.385 31.408c-68.751 46.765-76.181 150.846-52.604 223.5-18.891 31.227-19.751 78.473-3.359 110.802a7.501 7.501 0 0 0 13.379-6.783C6.859 426.109 12.281 365.467 49.715 343.68c16.385-9.536 30.748-7.351 48.046-3.89a99.457 99.457 0 0 1 1.041 14.489c0 4.143 3.357 7.5 7.5 7.5s7.5-3.357 7.5-7.5c0-5.088-.309-9.873-.864-14.375 17.673-3.25 32.555-6.449 49.429 3.187 47.472 27.108 47.557 119.345-.173 145.972-13.124 7.321-29.915 9.296-44.148 4.021a40.286 40.286 0 0 0-24.778 0c-15.865 5.101-32.447 2.73-46.686-6.673a7.5 7.5 0 1 0-8.266 12.516c17.847 11.788 39.55 14.864 59.542 8.438a25.326 25.326 0 0 1 15.598 0c18.538 6.277 38.947 4.338 56.046-5.202 5.858-3.268 11.243-7.347 16.05-12.088a99.266 99.266 0 0 0 61.112 21c25.209 0 48.254-9.426 65.809-24.933 48.443-9.479 92.524-32.967 127.591-68.033 46.871-46.873 72.684-109.192 72.684-175.482zM66.358 94.17 56.47 80.411c-.547-1.725.079-2.487 1.877-2.285 11.218 5.12 22.859 9.745 33.729 15.586a7.499 7.499 0 0 0 11.051-6.606c0-25.734-.7-46.943-17.056-68.675 24.363 11.121 47.167 24.493 47.167 55.311 0 4.143 3.357 7.5 7.5 7.5s7.5-3.357 7.5-7.5c0-30.658 22.807-44.19 47.166-55.31-16.354 21.732-17.054 42.94-17.054 68.674a7.5 7.5 0 0 0 11.053 6.604c10.868-5.845 22.505-10.464 33.725-15.585 1.798-.202 2.424.56 1.878 2.285l-9.886 13.76c-6.855 9.54-11.844 20.35-14.702 31.719-18.142-9.25-38.165-14.098-58.799-14.098-20.97-.168-41.837 4.842-60.47 14.456-2.843-11.501-7.861-22.434-14.791-32.077zM195.17 478.558c24.648-35.704 23.508-96.516-4.261-130.505 15.418-13.592 34.958-21.022 55.756-21.022 46.604 0 84.521 37.916 84.521 84.521 0 46.604-37.916 84.521-84.521 84.521a84.306 84.306 0 0 1-51.495-17.515zm134.355-11.946a99.077 99.077 0 0 0 13.512-30.18c26.007-10.506 49.331-25.956 69.364-45.989 29.294-29.295 49.057-66.163 57.15-106.618a7.5 7.5 0 0 0-5.883-8.826 7.497 7.497 0 0 0-8.826 5.883c-7.511 37.543-25.854 71.761-53.049 98.955-16.387 16.387-35.144 29.464-55.876 39.014 4.137-56.807-42.264-106.82-99.252-106.82-24.304 0-47.16 8.599-65.249 24.372l225.581-225.582c33.896 36.547 52.176 83.83 51.619 133.97a7.5 7.5 0 0 0 7.417 7.583c4.136.04 7.537-3.275 7.583-7.417.6-54.209-19.246-105.309-56.016-144.739l17.078-17.078c40.731 43.37 63.07 99.71 63.07 159.487 0 62.282-24.253 120.835-68.291 164.872-28.069 28.069-62.281 48.246-99.932 59.113z" fill="#000000" data-original="#000000" class=""></path><path d="M359.018 326.454a7.5 7.5 0 0 0-10.607 10.607l11.326 11.326c1.465 1.464 3.385 2.196 5.304 2.196s3.839-.732 5.304-2.196a7.5 7.5 0 0 0 0-10.607zM399.542 289.907l-14.599-6.505a7.5 7.5 0 0 0-9.903 3.798 7.5 7.5 0 0 0 3.798 9.903l14.599 6.505a7.501 7.501 0 0 0 6.105-13.701zM409.138 234.397l-15.876-.796a7.499 7.499 0 0 0-7.866 7.114 7.498 7.498 0 0 0 7.114 7.866l15.876.796a7.499 7.499 0 0 0 7.866-7.114 7.499 7.499 0 0 0-7.114-7.866zM385.197 198.497c.79 0 1.595-.126 2.385-.391l14.983-5.023a7.5 7.5 0 0 0-4.767-14.223l-14.983 5.023a7.5 7.5 0 0 0 2.382 14.614zM140.739 218.411a7.477 7.477 0 0 0 5.303-2.196l16.525-16.524a7.5 7.5 0 0 0-10.605-10.607l-11.223 11.222-11.223-11.222a7.5 7.5 0 0 0-10.606.001 7.498 7.498 0 0 0 .001 10.606l16.525 16.524a7.481 7.481 0 0 0 5.303 2.196zM208.382 218.411a7.477 7.477 0 0 0 5.303-2.196l16.525-16.524a7.498 7.498 0 0 0 .001-10.606 7.5 7.5 0 0 0-10.606-.001l-11.223 11.222-11.223-11.222a7.5 7.5 0 0 0-10.606.001 7.498 7.498 0 0 0 .001 10.606l16.525 16.524a7.481 7.481 0 0 0 5.303 2.196zM117.811 236.446l-11.222 11.223-11.221-11.222a7.5 7.5 0 0 0-10.606-.001 7.498 7.498 0 0 0-.001 10.606l16.524 16.525a7.5 7.5 0 0 0 10.608.001l16.525-16.525a7.5 7.5 0 0 0-10.607-10.607zM168.929 263.578a7.5 7.5 0 0 0 10.608.001l16.525-16.525a7.5 7.5 0 0 0-10.607-10.607l-11.222 11.223-11.221-11.222a7.5 7.5 0 0 0-10.606-.001 7.498 7.498 0 0 0-.001 10.606z" fill="#000000" data-original="#000000" class=""></path><circle cx="263.447" cy="358.791" r="7.5" fill="#000000" data-original="#000000" class=""></circle></g></svg></div>
+          <div>
+            <h1 class="text-lg font-bold pb-1">Integrated Supplier</h1>
+            <div class="flex items-center justify-center"><div class="border-t border-black w-40 lg:ml-40"></div></div>
+            <p class="text-xs pt-1">Professional employees are there for you to pick
+              the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center lg:flex-row-reverse text-center lg:text-right gap-6">
+          <div class="bg-slate-300 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M69.32 126.276h4.866l9.69 23.056c1.586 4.914 6.012 8.25 11.134 8.533l22.298 85.491c1.09 5.019 5.586 8.661 10.692 8.661 5.107 0 9.606-3.643 10.656-8.506l22.336-85.646c5.118-.282 9.54-3.604 11.019-8.224l9.804-23.365h4.867c3.811 0 6.911-3.113 6.911-6.941v-12.136c0-3.828-3.1-6.941-6.911-6.941h-1.235a37.568 37.568 0 0 0 4.624-18.076c0-16.415-10.46-30.375-25.001-35.552.209-1.61.351-3.242.351-4.909 0-20.81-16.787-37.739-37.421-37.739s-37.421 16.93-37.421 37.74c0 1.666.136 3.297.356 4.902-14.54 5.181-25.004 19.143-25.004 35.558a37.614 37.614 0 0 0 4.614 18.076H69.32c-3.811 0-6.913 3.113-6.913 6.941v12.136c0 3.828 3.102 6.941 6.913 6.941zm61.797 115.436c-.32 1.48-1.631 2.555-3.117 2.555-1.508 0-2.791-1.05-3.155-2.712l-21.809-83.635h49.93zm33.633-94.762a4.655 4.655 0 0 1-4.449 3.219H95.702c-2.04 0-3.828-1.292-4.564-3.527l-8.546-20.366h90.822zm17.57-64.768c0 6.796-2.28 13.044-6.068 18.076h-40.105c2.93-5.374 4.627-11.522 4.627-18.076 0-1.671-.146-3.306-.356-4.92 10.634-3.788 19.086-12.257 22.856-22.969 11.104 4.338 19.046 15.153 19.046 27.889zM128 11.734c16.359 0 29.67 13.453 29.67 29.988 0 12.75-7.929 23.63-19.053 27.954-5.133-14.672-18.982-25.233-35.265-25.233-1.645 0-3.253.145-4.843.353a28.881 28.881 0 0 1-.18-3.074C98.33 25.186 111.641 11.734 128 11.734zm-24.648 40.46c16.359 0 29.67 13.453 29.67 29.988 0 6.795-2.278 13.044-6.064 18.076H79.746c-3.786-5.032-6.064-11.281-6.064-18.076 0-16.535 13.311-29.988 29.67-29.988zm-33.194 55.815h115.684v10.516H70.158z" fill="#000000" data-original="#000000" class=""></path></g></svg></div>
+          <div>
+            <h1 class="text-lg font-bold pb-1">Sustainable Practise</h1>
+            <!-- <div class="md: flex md:items-center md:justify-center"><div class="border-t border-black w-36 lg:w-40 ml-20 md:ml-0 lg:ml-40"></div></div> -->
+            <div class="flex items-center justify-center"><div class="border-t border-black w-40 lg:ml-40"></div></div>
+            <p class="text-xs pt-1">Professional employees are there for you to pick
+              the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center lg:flex-row-reverse text-center lg:text-right gap-6">
+          <div class="bg-slate-300 rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 512h512V0H0Z" fill="#000000" data-original="#000000"></path></clipPath></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)"><path d="M0 0c0-10.462-8.48-18.942-18.942-18.942-10.461 0-18.941 8.48-18.941 18.942 0 10.461 8.48 18.941 18.941 18.941C-8.48 18.941 0 10.461 0 0Z" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(78.109 85.862)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0h-87.841" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(460.732 231.084)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0h-82.931" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(455.821 164.673)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0h-54.635" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(427.526 98.262)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0h154.837c18.677 0 33.753 15.421 33.189 34.227-.545 18.173-16.399 32.184-34.581 32.184h27.64c18.619 0 34.21 15.237 33.854 33.853-.344 18.04-15.076 32.558-33.199 32.558h15.473c18.123 0 32.854 14.518 33.2 32.558.356 18.616-15.236 33.853-33.855 33.853h-9.907c18.182 0 34.038 14.01 34.582 32.185.564 18.806-14.512 34.227-33.191 34.227H87.033" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(274.081 31.85)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0v81.855c0 5.523 4.477 10 10 10h83.333c5.523 0 10-4.477 10-10v-229.084c0-5.522-4.477-10-10-10H10c-5.523 0-10 4.478-10 10v114.542" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(7.5 194.148)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="m0 0 96.096-37.974h34.465" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(110.834 69.824)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0h-36.786l14.536 132.757c2.917 26.632-17.94 49.897-44.732 49.897-11.542 0-21.024-8.956-21.872-20.467C-99.376 19.407-217.593-44.395-217.593-44.395" style="stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(328.427 297.495)" fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path></g></g></svg></div>
+          <div>
+            <h1 class="text-lg font-bold pb-1">The Benefits Only</h1>
+            <div class="flex items-center justify-center"><div class="border-t border-black w-40 lg:ml-40"></div></div>
+            <p class="text-xs pt-1">Professional employees are there for you to pick
+              the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+  <footer class="mx-4 lg:mx-32 my-16 rounded-lg">
+    <footer class="footer footer-center p-10 bg-black text-white rounded-lg">
+      <div class="flex items-center gap-3 ">
+        <div><img src="./images/logo.png" alt=""></div>
+        <a href="#" class="lg:text-white text-3xl font-bold">Fruit Burst</a>
+      </div>
+      <div class="flex flex-wrap lg:flex-row items-center space-x-5 px-5 lg:pl-10">
+        <a href="#" class="text-white">Home</a>
+        <a href="#" class="text-white">About Us</a>
+        <a href="#" class="text-white">Shop</a>
+        <a href="#" class="text-white">All Fruits</a>
+        <a href="#" class="text-white">Support</a>
+        <a href="#" class="text-white">My Account</a>
+        <a href="#" class="text-white lg:hidden">Menu</a>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+              </path>
+            </svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+              </path>
+            </svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+              </path>
+            </svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs" width="26" height="26" x="0" y="0" viewBox="0 0 152 152"
+              style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+              <g>
+                <g data-name="Layer 2">
+                  <path
+                    d="M76 0a76 76 0 1 0 76 76A76 76 0 0 0 76 0zM53.9 116H37.32V62.59H53.9zm-8.3-60.7a9.65 9.65 0 1 1 9.61-9.7 9.68 9.68 0 0 1-9.61 9.7zM116 116H99.43V90c0-6.2-.12-14.15-8.62-14.15s-10 6.74-10 13.7V116H64.3V62.59h15.91v7.28h.23c2.21-4.2 7.62-8.63 15.69-8.63 16.78 0 19.87 11.06 19.87 25.42z"
+                    data-name="10.Linkedin" fill="#FFFFFF" data-original="#000000" class=""></path>
+                </g>
+              </g>
+            </svg></a>
+          <a class="bg-white rounded-full"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="26" height="26"
+              x="0" y="0" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512 512" xml:space="preserve"
+              class="">
+              <g>
+                <path
+                  d="M373.406 0H138.594C62.172 0 0 62.172 0 138.594V373.41C0 449.828 62.172 512 138.594 512H373.41C449.828 512 512 449.828 512 373.41V138.594C512 62.172 449.828 0 373.406 0zm108.578 373.41c0 59.867-48.707 108.574-108.578 108.574H138.594c-59.871 0-108.578-48.707-108.578-108.574V138.594c0-59.871 48.707-108.578 108.578-108.578H373.41c59.867 0 108.574 48.707 108.574 108.578zm0 0"
+                  fill="#000000" data-original="#000000" class=""></path>
+                <path
+                  d="M256 116.004c-77.195 0-139.996 62.8-139.996 139.996S178.804 395.996 256 395.996 395.996 333.196 395.996 256 333.196 116.004 256 116.004zm0 249.976c-60.64 0-109.98-49.335-109.98-109.98 0-60.64 49.34-109.98 109.98-109.98 60.645 0 109.98 49.34 109.98 109.98 0 60.645-49.335 109.98-109.98 109.98zM399.344 66.285c-22.813 0-41.367 18.559-41.367 41.367 0 22.813 18.554 41.371 41.367 41.371s41.37-18.558 41.37-41.37-18.558-41.368-41.37-41.368zm0 52.719c-6.258 0-11.352-5.094-11.352-11.352 0-6.261 5.094-11.351 11.352-11.351 6.261 0 11.355 5.09 11.355 11.351 0 6.258-5.094 11.352-11.355 11.352zm0 0"
+                  fill="#000000" data-original="#000000" class=""></path>
+              </g>
+            </svg></a>
+        </div>
+      </div>
+    </footer>
+  </footer>
+</body>
+
+</html>
